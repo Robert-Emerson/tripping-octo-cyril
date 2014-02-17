@@ -26,7 +26,9 @@ var server = http.createServer(function (request, response) {
         response.write("<h1>Displays the image ID, body used, and lens used for each photo from my flickr feed </h1>");
         response.write("<h2>To filter this by lens type add /<i>lenstype</i> to the URL</h2>");
         response.write("<h3>Lens types are Canon, Vivitar, Pentax or Unknown</h3>")
-        response.write(JSON.stringify(rows));
+        for (var i in rows) {
+            response.write(JSON.stringify(rows[i]) + "<br>");
+        }
         response.end();
         });
     case "/vivitar":
@@ -34,7 +36,9 @@ var server = http.createServer(function (request, response) {
             response.write("<h1>Displays the image ID, body used, and lens used for each photo from my flickr feed </h1>");
             response.write("<h2>To filter this by lens type add /<i>lenstype</i> to the URL</h2>");
             response.write("<h3>Lens types are Canon, Vivitar, Pentax or Unknown</h3>")
-            response.write(JSON.stringify(rows));
+            for (var i in rows) {
+                response.write(JSON.stringify(rows[i]) + "<br>");
+            }
             response.end();
         });
     case "/canon":
@@ -42,7 +46,9 @@ var server = http.createServer(function (request, response) {
             response.write("<h1>Displays the image ID, body used, and lens used for each photo from my flickr feed </h1>");
             response.write("<h2>To filter this by lens type add /<i>lenstype</i> to the URL</h2>");
             response.write("<h3>Lens types are Canon, Vivitar, Pentax or Unknown</h3>")
-            response.write(JSON.stringify(rows));
+            for (var i in rows) {
+                response.write(JSON.stringify(rows[i]) + "<br>");
+            }
             response.end();
     });
     case "/unknown":
@@ -60,7 +66,9 @@ var server = http.createServer(function (request, response) {
             response.write("<h1>Displays the image ID, body used, and lens used for each photo from my flickr feed </h1>");
             response.write("<h2>To filter this by lens type add /<i>lenstype</i> to the URL</h2>");
             response.write("<h3>Lens types are Canon, Vivitar, Pentax or Unknown</h3>")
-            response.write(JSON.stringify(rows));
+            for (var i in rows) {
+                response.write(JSON.stringify(rows[i]) + "<br>");
+            }
             response.end();
         });
     }
